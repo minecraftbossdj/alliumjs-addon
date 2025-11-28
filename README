@@ -1,1 +1,16 @@
 WARNING: TO BUILD AND USE THIS MOD, YOU WILL NEED THE ALLIUM VERSION OF THE MOD FROM https://github.com/minecraftbossdj/Allium-cobalt-0.9.5/releases/tag/cobalt-0.9.5
+
+examples:
+
+lua:
+local AlliumEvents = require("com.awesoft.alliumjs.AlliumEvents")
+
+AlliumEvents.KUBEJS_EVENT:register(script, function(name, obj)
+	print("event name: "..name)
+end)
+
+js:
+
+Allium.fireEvent("testEvent","yoo")
+
+note that obj can be ANYTHING (the second arguement), just not sure what javascript and lua can both see...
