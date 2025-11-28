@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "alliumjs",
+	"version": "${version}",
+	"name": "AlliumJS",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"minecraftbossdj"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "",
+	"icon": "assets/alliumjs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "com.awesoft.alliumjs.AlliumJS"
+		],
+		"client": [
+          "com.awesoft.alliumjs.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"alliumjs.mixins.json",
+		{
+			"config": "alliumjs.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
